@@ -1,0 +1,107 @@
+.datepicker 
+{
+	.datepicker-input
+	{
+		.input
+		{
+			&.is-invalid
+			{
+				color: orangered; 
+				background: rgba(orangered, .2);
+				border-color: orangered;
+			}
+		}
+	}
+	.calendar
+	{
+		&:not(.active)
+		{
+			display: none;
+		}
+		font-family: verdana, Meiryo, sans-selif;
+		position: absolute;
+		width: 300px;
+		background: #fff;
+		border: 10px solid dimgray;
+		z-index: 10;
+		.calendar-month
+		{
+			display: flex;
+			line-height: 2.5em;
+			.next, .prev
+			{
+				flex: 1; 
+				text-align: center;
+				cursor: pointer; 
+				color: dimgray;
+				&:hover
+				{
+					opacity: .3;
+					transition: .3s;
+				}
+			}
+			.month
+			{
+				flex: 5;
+				text-align: center;
+				background: dimgray;
+				color: #fff;
+			}
+		}
+		.calendar-weekdays
+		{
+			display: flex;
+			line-height: 2em;
+			.weekday
+			{
+				flex: 1;
+				text-align: center;
+				background: darkgray;
+				color: #fff;
+				&.w0, &.w6
+				{
+					background: dimgray;
+					color: #fff;
+				}
+			}
+		}
+		.calendar-days
+		{
+			display: flex;
+			flex-wrap: wrap;
+			line-height: 1.5em;
+			.day 
+			{
+				width: 14.285%;
+				text-align: center;
+				background: #eee;
+				border: 1px solid #eef;
+				cursor: pointer;
+				&:hover
+				{
+					opacity: .5;
+					transition: .3s;
+				}
+				&.w0, &.w6
+				{
+					background: #fff;
+				}
+				&.is-disabled
+				{
+					background: #ccc;
+					color: #aaa;
+				}
+				&.is-today
+				{
+					background: dimgray;
+					color: #fff;
+				}
+				&.is-selected
+				{
+					background: dodgerblue;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

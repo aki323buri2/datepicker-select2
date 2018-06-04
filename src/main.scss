@@ -1,0 +1,40 @@
+
+@import '~bulma/bulma';
+
+$fa-font-path: '~@fortawesome/fontawesome-free-webfonts/webfonts' !default;
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-regular';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-brands';
+
+.control.has-icons-left .icon.linked
+{
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.flex 
+{
+	display: flex;
+}
+.fields
+{
+	display: flex;
+	margin-bottom: 1em;
+	.title
+	{
+		font-size: 1.2em;
+		font-weight: 700;
+		margin: 0 1em 0 0;
+		line-height: 2em;
+		width: 100px;
+		text-align: right;
+	}
+	.delimiter
+	{
+		font-size: 1.2em;
+		font-weight: 700;
+		margin: 0 1em 0 1em;
+		line-height: 2em;
+	}
+}
